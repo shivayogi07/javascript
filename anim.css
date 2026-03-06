@@ -1,0 +1,43 @@
+h1{
+    height: 50px;
+    width: 100%;
+    background-color: hotpink;
+    border: 2px solid grey;
+    box-shadow: 10px 10px 10px black;
+    border-radius: 10px;
+    padding-left: 20px;
+
+}
+
+/* @media(width: 400px){
+    h1{
+        background-color: brown;
+        color: aliceblue;
+    }
+
+    div{
+        height: 100px;
+        width: 100px;
+        background-color: black;
+    }
+} */
+
+/* @media(min-width: 400px){
+    h1{
+        background-color: black;
+        color: aliceblue;
+    }
+} */
+/* @media(max-width: 500px){
+    h1{
+        background-color: black;
+        color: aliceblue;
+    }
+} */
+
+@media (orientation: landscape){
+    h1{
+        background-color:aqua;
+        color: brown;
+    }
+}

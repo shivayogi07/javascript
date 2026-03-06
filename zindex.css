@@ -1,0 +1,21 @@
+.boxone{
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+    position: relative;
+    z-index: 1;
+}
+
+.boxtwo{
+    height: 100px;
+    width: 100px;
+    background-color: brown;
+    position: relative;
+    bottom: 50px;
+}
+
+.boxthree{
+    height: 100px;
+    width: 100px;
+    background-color: purple;
+}

@@ -1,0 +1,32 @@
+#outer{
+    height: 300px;
+    width: 600px;
+    background-color: yellow;
+    display: grid;
+    grid-template-rows: 60px 60px 60px 60px;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(3,1fr);
+    border:2px solid black;
+    box-shadow: 10px 10px 8px grey;
+    row-gap: 10px;
+    column-gap: 10px;
+    grid-gap: 10px 10px;
+
+}
+
+.item{
+    height: 50px;
+    width: 100px;
+    background-color: aqua;
+    text-align: center;
+    font-size: 40px;
+}
+
+.item1{
+    height: 50px;
+    width: 100px;
+    background-color: aqua;
+    text-align: center;
+    font-size: 40px;
+}

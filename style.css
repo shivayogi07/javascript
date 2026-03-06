@@ -1,0 +1,71 @@
+h1{
+    color: brown;
+}
+#login{
+    color: aliceblue;
+    background-color: black;
+}
+#signup{
+    color: aliceblue;
+    background-color: brown;
+}
+.upvote{
+    background-color: green;
+    color: black;
+}
+p a {
+    color: purple;
+    background-color: yellow;
+}
+/* nav a can also be writtrn */
+nav ul li a {
+    color: hotpink;
+
+}
+p + h3{
+    text-decoration: underline;
+    color: pink;
+}
+
+.upvote + button {
+    color: black;
+    background-color: aqua;
+}
+
+div > input {
+    background-color: black;
+}
+button:hover{
+    background-color: black;
+    color: aliceblue;
+}
+
+p + h3:hover{
+    text-decoration: none;
+}
+
+button:active{
+    background-color: hotpink;
+}
+
+p:active{
+    color: blue;
+    font-weight: 500;
+}
+.lang:checked{
+    color: brown;
+
+}
+
+input[type = "radio"]:checked + label{
+    color: brown;
+    font-weight: bold;
+}
+
+h1::first-letter{
+    color: aquamarine;
+}
+
+p::selection{
+    background-color: yellow;
+}
