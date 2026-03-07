@@ -197,9 +197,9 @@
 
 // spread   WITH ARRAY
 
-let arr = [1,2,3,4,5];
-let newarr = [...arr,7,8,];
+// let arr = [1,2,3,4,5];
+// let newarr = [...arr,7,8,];
 
-console.log(newarr);
+// console.log(newarr);
 
-console.log(arr);
+// console.log(arr);
