@@ -10,7 +10,7 @@
 
 // console.dir(para);
 
-// para.innerText = "hey spider man im back";
+// console.log(para.textContent);
 
 
 
@@ -20,10 +20,17 @@
 
 // console.log(result);
 
-let deleteItem = confirm("Are you sure you want to delete this item?");
+// let deleteItem = confirm("Are you sure you want to delete this item?");
 
-if (deleteItem) {
-    console.log("Item deleted");
-} else {
-    console.log("Deletion cancelled");
-}
+// if (deleteItem) {
+//     console.log("Item deleted");
+// } else {
+//     console.log("Deletion cancelled");
+// }
+
+let img = document.querySelector('img');
+
+console.dir(img);
+
+img.classList;
+
