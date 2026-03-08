@@ -1,36 +1,33 @@
-// let smallimg = document.getElementsByClassName("oldImg");
+// creating the para
+let newp = document.createElement("p");
+newp.innerText = "hey im red";
+document.querySelector('body').append(newp);
+newp.classList.add('red');
 
+//creating the heading 3
+let newh3 = document.createElement('h3');
+newh3.innerText = "hey in new 3 elelent!!";
+document.querySelector('body').appendChild(newh3);
+newh3.classList.add('blue');
 
-// for(let i = 0; i< smallimg.length; i++){
-//     console.log(smallimg[i]);
-// }
+//creating the div and the h3 and para2
 
+let newdiv = document.createElement('div');
+let h1 = document.createElement('h3');
+let para2 = document.createElement('p');
+ 
+// adding the text into the element 
 
-// let para = document.querySelector("p");
+h1.innerText = "hey im am H3 tag";
+para2.innerText = "hey im the second para inside the div";
 
-// console.dir(para);
+//appending the elements into the div
 
-// console.log(para.textContent);
+newdiv.append(h1);
+newdiv.append(para2);
 
+//creating the class to add the style in the css
+newdiv.classList.add("box");
 
-
-// confirm("message");
-
-// let result = confirm("Do you want to delete this file?");
-
-// console.log(result);
-
-// let deleteItem = confirm("Are you sure you want to delete this item?");
-
-// if (deleteItem) {
-//     console.log("Item deleted");
-// } else {
-//     console.log("Deletion cancelled");
-// }
-
-let img = document.querySelector('img');
-
-console.dir(img);
-
-img.classList;
-
+//we are placing in the page by this command
+document.querySelector("body").prepend(newdiv);
