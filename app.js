@@ -31,3 +31,6 @@ newdiv.classList.add("box");
 
 //we are placing in the page by this command
 document.querySelector("body").prepend(newdiv);
+
+// DOM events!
+// now doing the new pro
