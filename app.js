@@ -17,3 +17,5 @@ changeColor("red", 1000, function () {
         });
     });
 });
+
+// callback nesting -> callback hell
