@@ -21,33 +21,42 @@
 // callback nesting -> callback hell
 
 
-function savetoDB(data, succes, failure) {
-    let inernetspeed = Math.floor(Math.random() * 10) + 1;
-    if (inernetspeed > 4) {
-        succes();
+function savetoDB(data, success, failure) {
+    let internetSpeed = Math.floor(Math.random() * 10) + 1;
+
+    if (internetSpeed > 4) {
+        success();
     } else {
         failure();
     }
 }
 
 savetoDB(
-    "apna college", () => {
-        console.log("sucess: your data was saved");
+    "apna college",
+    () => {
+        console.log("success: your data was saved");
+
         savetoDB(
-            "hello world", () => {
-                console.log("sucess2: your data2 was saved");
+            "hello world",
+            () => {
+                console.log("success2: your data2 was saved");
+
                 savetoDB(
-                    "shivu", () => {
-                        console.log("sucess3: your data3 was saved");
-                    }, () => {
+                    "shivu",
+                    () => {
+                        console.log("success3: your data3 was saved");
+                    },
+                    () => {
                         console.log("failed3: weak connection!");
                     }
                 );
+
             },
             () => {
                 console.log("failed2: weak connection!");
             }
         );
+
     },
     () => {
         console.log("failed1: weak connection!");
