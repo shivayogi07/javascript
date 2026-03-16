@@ -21,44 +21,59 @@
 // callback nesting -> callback hell
 
 
-function savetoDB(data, success, failure) {
-    let internetSpeed = Math.floor(Math.random() * 10) + 1;
+// function savetoDB(data, success, failure) {
+//     let internetSpeed = Math.floor(Math.random() * 10) + 1;
 
-    if (internetSpeed > 4) {
-        success();
-    } else {
-        failure();
-    }
-}
+//     if (internetSpeed > 4) {
+//         success();
+//     } else {
+//         failure();
+//     }
+// }
 
-savetoDB(
-    "apna college",
-    () => {
-        console.log("success: your data was saved");
+// savetoDB(
+//     "apna college",
+//     () => {
+//         console.log("success: your data was saved");
 
-        savetoDB(
-            "hello world",
-            () => {
-                console.log("success2: your data2 was saved");
+//         savetoDB(
+//             "hello world",
+//             () => {
+//                 console.log("success2: your data2 was saved");
 
-                savetoDB(
-                    "shivu",
-                    () => {
-                        console.log("success3: your data3 was saved");
-                    },
-                    () => {
-                        console.log("failed3: weak connection!");
-                    }
-                );
+//                 savetoDB(
+//                     "shivu",
+//                     () => {
+//                         console.log("success3: your data3 was saved");
+//                     },
+//                     () => {
+//                         console.log("failed3: weak connection!");
+//                     }
+//                 );
 
-            },
-            () => {
-                console.log("failed2: weak connection!");
+//             },
+//             () => {
+//                 console.log("failed2: weak connection!");
+//             }
+//         );
+
+//     },
+//     () => {
+//         console.log("failed1: weak connection!");
+//     }
+// );
+
+// optmising with promise
+
+    function savetoDB(data) {
+        return new Promise ((resolve,reject) => {
+            let internetSpeed = Math.floor(Math.random() * 10) + 1;
+            if(internetSpeed > 4){
+                resolve("sucess: data was saved");
+            }else{
+                reject("failed :weak connection");
             }
-        );
-
-    },
-    () => {
-        console.log("failed1: weak connection!");
+        });
     }
-);
+
+savetoDB("shivu");
