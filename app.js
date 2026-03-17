@@ -79,8 +79,8 @@ function saveToDB(data) {
 
 saveToDB("Hello")
     .then((result) => {
-        console.log(result);
+        console.log("promise was resolved");
     })
     .catch((error) => {
-        console.log(error);
+        console.log("error occured and rejected");
     });
