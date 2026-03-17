@@ -65,22 +65,65 @@
 
 // optmising with promise
 
-function saveToDB(data) {
-    return new Promise((resolve, reject) => {
-        let internetSpeed = Math.floor(Math.random() * 10) + 1;
+// function saveToDB(data) {
+//     return new Promise((resolve, reject) => {
+//         let internetSpeed = Math.floor(Math.random() * 10) + 1;
 
-        if (internetSpeed > 4) {
-            resolve("Success: data saved");
-        } else {
-            reject("Error: weak connection");
-        }
+//         if (internetSpeed > 4) {
+//             resolve("Success: data saved");
+//         } else {
+//             reject("Error: weak connection");
+//         }
+//     });
+// }
+
+// saveToDB("Hello")
+//     .then((result) => {
+//         console.log("promise was resolved");
+//     })
+//     .catch((error) => {
+//         console.log("error occured and rejected");
+//     });
+
+
+function step1() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("Step 1 completed");
+            resolve("Data from step 1");
+        }, 1000);
     });
 }
 
-saveToDB("Hello")
-    .then((result) => {
-        console.log("promise was resolved");
+function step2(data) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("Step 2 received:", data);
+            resolve("Data from step 2");
+        }, 1000);
+    });
+}
+
+function step3(data) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("Step 3 received:", data);
+            resolve("All steps completed");
+        }, 1000);
+    });
+}
+
+// Promise chaining
+step1()
+    .then((result1) => {
+        return step2(result1);   // pass data to next step
+    })
+    .then((result2) => {
+        return step3(result2);
+    })
+    .then((finalResult) => {
+        console.log(finalResult);
     })
     .catch((error) => {
-        console.log("error occured and rejected");
+        console.log("Error:", error);
     });
