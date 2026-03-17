@@ -86,44 +86,69 @@
 //     });
 
 
-function step1() {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            console.log("Step 1 completed");
-            resolve("Data from step 1");
-        }, 1000);
-    });
-}
+// function step1() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("Step 1 completed");
+//             resolve("Data from step 1");
+//         }, 1000);
+//     });
+// }
 
-function step2(data) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            console.log("Step 2 received:", data);
-            resolve("Data from step 2");
-        }, 1000);
-    });
-}
+// function step2(data) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("Step 2 received:", data);
+//             resolve("Data from step 2");
+//         }, 1000);
+//     });
+// }
 
-function step3(data) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            console.log("Step 3 received:", data);
-            resolve("All steps completed");
-        }, 1000);
-    });
-}
+// function step3(data) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("Step 3 received:", data);
+//             resolve("All steps completed");
+//         }, 1000);
+//     });
+// }
 
 // Promise chaining
-step1()
-    .then((result1) => {
-        return step2(result1);   // pass data to next step
-    })
-    .then((result2) => {
-        return step3(result2);
-    })
-    .then((finalResult) => {
-        console.log(finalResult);
-    })
-    .catch((error) => {
-        console.log("Error:", error);
-    });
+// step1()
+//     .then((result1) => {
+//         return step2(result1);   // pass data to next step
+//     })
+//     .then((result2) => {
+//         return step3(result2);
+//     })
+//     .then((finalResult) => {
+//         console.log(finalResult);
+//     })
+//     .catch((error) => {
+//         console.log("Error:", error);
+//     });
+
+
+// async function greet(){
+//     return "hello";
+// }
+
+// greet();
+let btn = document.querySelector("button");
+btn.addEventListener("click", async () =>{
+    let fact = await getFact();
+    console.log(fact);
+    let p = document.querySelector("#result");
+    p.innerText = fact;
+})
+let url = "https://catfact.ninja/fact";
+
+async function getFact(){
+    try{
+        let res = await axios.get(url);
+        return res.data.fact;
+    }catch(e){
+        console.log("error -",e);
+        return "no fact found"
+    }
+}

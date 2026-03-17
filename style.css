@@ -1,0 +1,10 @@
+body{
+    align-items: center; 
+    background-color: black;
+    color: aqua;
+}
+
+button{
+    background-color: aqua;
+    color: black;
+}
